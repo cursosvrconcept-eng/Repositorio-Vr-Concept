@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar e Estilos Globais */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a661;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(to right, #c9a661, #dec18b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

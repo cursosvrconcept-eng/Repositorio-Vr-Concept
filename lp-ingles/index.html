@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://viniciusrosa.vrconcept.com.br/img/Logo%20VR%20Concept%20Dourada.png" />
+    
+    <!-- 1. PRELOAD LCP IMAGE (Critical for Speed Score) -->
+    <link rel="preload" as="image" href="https://viniciusrosa.vrconcept.com.br/img/Logo%20VR%20Concept%20Dourada.png" fetchpriority="high">
+
+    <!-- 2. PRECONNECTS (Establish connections early) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://grainy-gradients.vercel.app">
+    <link rel="preconnect" href="https://tracking.utmify.com.br">
+    <link rel="preconnect" href="https://api6.ipify.org">
+    <link rel="preconnect" href="https://ik.imagekit.io">
+
+    <!-- 3. FONTS (Display Swap to prevent invisible text) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- 4. GOOGLE TAG MANAGER (Deferred to not block render) -->
+    <script>
+      // Load GTM slightly later to prioritize paint
+      window.addEventListener('load', function() {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KGHBDS23');
+      });
+    </script>
+
+    <!-- 5. UTMIFY SCRIPTS -->
+    <script>
+      window.pixelId = "698af1c15b92361da25ec618";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+
+    <title>Organic Flow Protocol | VR Concept</title>
+    <meta name="description" content="El protocolo técnico de pulido que transforma la resina en efecto vidro permanente.">
+  </head>
+  <body class="bg-brand-black text-gray-200 antialiased font-sans">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGHBDS23"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
