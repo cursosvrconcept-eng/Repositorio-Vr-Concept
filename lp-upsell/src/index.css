@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-bg-card: #161616;
+  --color-gold-primary: #C9A84C;
+  --color-gold-light: #E2C27D;
+  --color-gold-dark: #A07830;
+  --color-text-primary: #F5F0E8;
+  --color-text-secondary: #A89880;
+  --color-text-muted: #5A5040;
+
+  --font-display: "Playfair Display", serif;
+  --font-headline: "Cormorant Garamond", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Noise texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold-primary) 0%, var(--color-gold-light) 50%, var(--color-gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold-primary) 0%, var(--color-gold-light) 50%, var(--color-gold-dark) 100%);
+}
