@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://viniciusrosa.vrconcept.com.br/img/Logo%20VR%20Concept%20Dourada.png" />
+    
+    <!-- 1. PRELOAD LCP IMAGE -->
+    <link rel="preload" as="image" href="https://viniciusrosa.vrconcept.com.br/img/Logo%20VR%20Concept%20Dourada.png" fetchpriority="high">
+
+    <!-- 2. PRECONNECTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://ik.imagekit.io">
+
+    <!-- 3. FONTS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- 4. THIRD PARTY SCRIPTS (GTM & UTMIFY) - DELAYED / LAZY LOADED -->
+    <!-- Essa técnica elimina as Long Tasks dos scripts de terceiros no FCP/LCP -->
+    <script>
+      (function() {
+        var scriptsLoaded = false;
+        
+        function loadThirdPartyScripts() {
+          if (scriptsLoaded) return;
+          scriptsLoaded = true;
+
+          // GTM
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.defer=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-KGHBDS23');
+
+          // UTMify
+          window.pixelId = "698af1c15b92361da25ec618";
+          var utmScript = document.createElement("script");
+          utmScript.setAttribute("async", "true");
+          utmScript.setAttribute("defer", "true");
+          utmScript.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+          document.head.appendChild(utmScript);
+        }
+
+        // Aguarda a primeira interação humana ou força o carregamento após 3.5s
+        var interactionEvents = ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'];
+        interactionEvents.forEach(function(event) {
+          window.addEventListener(event, loadThirdPartyScripts, { once: true, passive: true });
+        });
+        setTimeout(loadThirdPartyScripts, 3500);
+      })();
+    </script>
+
+    <title>Organic Flow Protocol | VR Concept</title>
+    <meta name="description" content="El protocolo técnico de pulido que transforma la resina en efecto vidrio permanente.">
+  </head>
+  <body class="bg-brand-black text-gray-200 antialiased font-sans">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGHBDS23"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
